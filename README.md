@@ -40,6 +40,7 @@ lets take a look at it :
 
 ![cat rules](https://github.com/user-attachments/assets/f4d88b45-4d0a-409b-9f3a-e64ed3dd420d)
 
+before write our rule lets breakdown the suricata rules format :
 
 ## Suricata Rules Format
 
@@ -54,6 +55,43 @@ every suricata rule is made of 3 main part : Action, Header, Rule Option
 ![image](https://github.com/user-attachments/assets/7f1a6c3d-3750-4223-97bd-8fa8251d834c)
 
 this is an example rule, in this rule the red part is Action, the green part is Header and the blue part is Option
+
+now i will create my rule file :
+
+![image](https://github.com/user-attachments/assets/1388a0bd-8db6-41ae-9953-b84fe436ba12)
+
+this is the simple rule that i wrote :
+![rule](https://github.com/user-attachments/assets/168b880c-b342-487d-b4b5-59766c4a0b80)
+
+lets break it down :
+
+`alert` =  an alert should be generated when the rule matches, this is Action part
+
+`ICMP` = Internet Control Message Protocol 
+
+`any any -> any any` = every src_ip and src_port to every dest_ip and dest_port
+
+`msg:"ICMP Ping Detected"` = This message will be logged when the rule triggers
+
+`itype:8` = ICMP type that the rule is looking for
+
+`sid:1000001` = rule sid
+
+`rev:1` = the revision number of the rule. If the rule is updated or modified, this number should be incremented
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+now the next step is to tell suricata to use this rule file too alongside the suricata local rules :
+
+lets open the suricata conf file : (```/etc/suricata/suricata.yaml```)
+
+![image](https://github.com/user-attachments/assets/902d686b-ba44-4b69-9ffd-ccee475a3752)
+
+now i add sina.rules to this part :
+
+![image](https://github.com/user-attachments/assets/e6351694-7248-4d18-85fa-76458c2a0fbc)
+
+
 
 
 
