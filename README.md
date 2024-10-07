@@ -40,3 +40,33 @@ lets take a look at it :
 
 ![cat rules](https://github.com/user-attachments/assets/f4d88b45-4d0a-409b-9f3a-e64ed3dd420d)
 
+
+## Suricata Rules Format
+
+Suricata uses specific rules to define patterns of traffic that should be monitored, alerted on, or blocked.
+
+note! : Snort and Suricata rules structure are the same and you can use your rule for both tools (especially for basic detection scenarios).
+
+every suricata rule is made of 3 main part : Action, Header, Rule Option
+
+``` (Action) [protocol] [source_ip] [source_port] -> [destination_ip] [destination_port] (options) ```
+
+![image](https://github.com/user-attachments/assets/7f1a6c3d-3750-4223-97bd-8fa8251d834c)
+
+this is an example rule, in this rule the red part is Action, the green part is Header and the blue part is Option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
