@@ -10,3 +10,6 @@ Suricata monitors network traffic coming in and out of the network. It uses a se
  In case of any detection, it will create an alert and send that alert to the user.
 
 ![Diagram](https://github.com/user-attachments/assets/505f8fbe-cb01-47be-8011-00250ec89203)
+
+## Set up Suricata
+
