@@ -15,7 +15,7 @@ In this diagram, Suricata is being used in NIPS mode, working inline in the netw
 
 ## Set up Suricata
 
-after creating out machine and getting ip from our home router (in Bridged mod) now its time to intsall Suricata.
+after creating our machine and getting ip from our home router (in Bridged mod) now its time to install Suricata.
 
 to do that we use : 
 ```bash
@@ -56,7 +56,7 @@ every suricata rule is made of 3 main part : Action, Header, Rule Option
 
 this is an example rule, in this rule the red part is Action, the green part is Header and the blue part is Option
 
-now i will create my rule file :
+now i will create my own rule file :
 
 ![image](https://github.com/user-attachments/assets/1388a0bd-8db6-41ae-9953-b84fe436ba12)
 
@@ -102,7 +102,7 @@ at first restart suricata to make sure that changes are on board and then run su
 
 ``` -c /etc/suricata/suricata.yaml ``` to ensure that we verity our rules 
 
-``` -i enp0s3 -v ``` to select enp0s3 interface in verbose mode 
+``` -i enp0s3 -v ``` to select enp0s3 (my vm machine adapter) interface in verbose mode 
 
 
 ![image](https://github.com/user-attachments/assets/6716ac94-59f3-4c4a-86d9-67fa78fdfc9b)
@@ -112,7 +112,7 @@ now Suricata is running !
 
 ## Trigger an alert 
 
-i will use ping command to send ICMP packet to a well known DNS server like 8.8.8.8 :
+i will use `ping` command to send ICMP packet to a well known DNS server like 8.8.8.8 :
 
 ![image](https://github.com/user-attachments/assets/b25789eb-246c-42f2-8a2a-d5735ba14a53)
 
