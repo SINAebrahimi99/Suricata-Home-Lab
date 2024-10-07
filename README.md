@@ -92,12 +92,35 @@ now i add sina.rules to this part :
 ![image](https://github.com/user-attachments/assets/e6351694-7248-4d18-85fa-76458c2a0fbc)
 
 
+## Run Suricata 
+
+at first restart suricata to make sure that changes are on board and then run suricata
+
+![image](https://github.com/user-attachments/assets/b1063bf2-9ff3-486e-8982-f00f4d2b2f64)
 
 
 
+``` -c /etc/suricata/suricata.yaml ``` to ensure that we verity our rules 
+
+``` -i enp0s3 -v ``` to select enp0s3 interface in verbose mode 
 
 
+![image](https://github.com/user-attachments/assets/6716ac94-59f3-4c4a-86d9-67fa78fdfc9b)
 
+now Suricata is running !
+
+
+## Trigger an alert 
+
+i will use ping command to send ICMP packet to a well known DNS server like 8.8.8.8 :
+
+![image](https://github.com/user-attachments/assets/b25789eb-246c-42f2-8a2a-d5735ba14a53)
+
+now lets check the log file, suricata log file path is `/var/log/suricata/eve.json` :
+
+![image](https://github.com/user-attachments/assets/109e6f77-987d-4193-ba80-0bcbe1ae4699)
+
+as you can see the log file and alert of sending ICMP packet to 8.8.8.8 is here !
 
 
 
