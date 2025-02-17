@@ -46,8 +46,6 @@ before write our rule lets breakdown the suricata rules format :
 
 Suricata uses specific rules to define patterns of traffic that should be monitored, alerted on, or blocked.
 
-note! : Snort and Suricata rules structure are the same and you can use your rule for both tools (especially for basic detection scenarios).
-
 every suricata rule is made of 3 main part : Action, Header, Rule Option
 
 ``` (Action) [protocol] [source_ip] [source_port] -> [destination_ip] [destination_port] (options) ```
